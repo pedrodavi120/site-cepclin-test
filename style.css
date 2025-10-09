@@ -1,0 +1,550 @@
+/* Configurações Globais e Variáveis */
+:root {
+    --primary-color: #0ea5e9; /* sky-500 */
+    --primary-hover-color: #0284c7; /* sky-600 */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Efeito de gradiente para seções */
+.gradient-bg {
+    background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);
+}
+
+/* Transições Suaves */
+.smooth-transition {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estilo de Card com Sombra e Hover */
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(14, 165, 233, 0.15); /* Sombra colorida e mais suave */
+}
+
+/* Estilo do Slider Principal (Hero) */
+.hero-slider {
+    width: 100%;
+    height: 90vh;
+    min-height: 600px;
+    max-height: 800px;
+    color: white;
+}
+
+.swiper-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 41, 64, 0.6);
+    z-index: 2;
+}
+
+.slide-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    padding: 0 24px;
+}
+
+/* Estilização dos controles do Swiper */
+.swiper-button-prev, .swiper-button-next {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+}
+.swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 20px;
+    font-weight: bold;
+}
+.swiper-pagination-bullet {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 10px;
+    height: 10px;
+}
+.swiper-pagination-bullet-active {
+    background-color: #fff;
+    transform: scale(1.2);
+}
+
+/* Cards de Estudos */
+.study-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.study-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.icon-container {
+    background-color: #e0f2fe;
+    color: #0284c7;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.study-button {
+    margin-top: 1.5rem;
+    background-color: #0ea5e9;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 9999px;
+    text-align: center;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+.study-button:hover {
+    background-color: #0284c7;
+}
+
+/* Itens da seção de Exames com animação melhorada */
+.exam-item {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 1.25rem;
+    text-align: center;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    color: #374151;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                box-shadow 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                background-color 0.25s ease-in-out,
+                color 0.25s ease-in-out;
+}
+.exam-item:hover {
+    background-color: white;
+    color: var(--primary-color);
+    transform: translateY(-6px) scale(1.05); /* Levanta o botão */
+    box-shadow: 0 10px 25px rgba(14, 165, 233, 0.2); /* Sombra mais pronunciada e colorida */
+}
+.exam-item:active {
+    transform: translateY(-2px) scale(1.02); /* Efeito de pressionar */
+    box-shadow: 0 4px 10px rgba(14, 165, 233, 0.1);
+}
+
+/* Itens da seção de Infraestrutura */
+.infra-item {
+    background-color: #f0f9ff;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 1rem;
+    font-weight: 600;
+    color: #374151;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                background-color 0.3s ease;
+}
+.infra-item i {
+    color: var(--primary-color);
+}
+.infra-item:hover {
+    background-color: #e0f2fe;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(14, 165, 233, 0.12);
+}
+
+/* Estilo da Van na seção Frota */
+@media (min-width: 1024px) { /* Corresponde ao breakpoint 'lg' do Tailwind */
+    .frota-van-img {
+        transform: scale(1.4); /* Aumenta a escala para 140% */
+        transform-origin: center left;
+    }
+}
+
+/* Seção Instagram */
+.instagram-post {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 1rem;
+    aspect-ratio: 1 / 1;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+.instagram-post img {
+    transition: transform 0.4s ease;
+}
+.instagram-post:hover img {
+    transform: scale(1.1);
+}
+.instagram-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    color: white;
+}
+.instagram-post:hover .instagram-overlay {
+    opacity: 1;
+}
+.instagram-overlay i {
+    width: 48px;
+    height: 48px;
+}
+
+/* Cards de Notícias */
+.news-card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    background-color: #f0f9ff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+.news-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+}
+.news-date {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    text-align: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+.news-date span {
+    display: block;
+}
+.news-date span:first-child {
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+.news-date span:last-child {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+.news-content {
+    display: flex;
+    flex-direction: column;
+}
+.news-title {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+.news-title:hover {
+    color: var(--primary-color);
+}
+.news-tag {
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Carrossel de Patrocinadores */
+.scroller {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+.scroller__inner {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    animation: scroll 40s linear infinite;
+}
+.scroller__inner li {
+    list-style: none;
+}
+.scroller__inner img {
+    height: 40px;
+    max-width: 150px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+.scroller__inner img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 1rem));
+    }
+}
+
+#sponsors-grid {
+    display: none; /* Inicia oculto */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out;
+}
+#sponsors-grid.show {
+    display: grid;
+    max-height: 1000px; /* Um valor alto para permitir a expansão */
+}
+#sponsors-grid img {
+    height: 50px;
+    width: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+#sponsors-grid img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Menu Mobile (Escondido) */
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+#mobile-menu.open {
+    max-height: 500px; /* Ajuste conforme necessário */
+}
+
+/* Botão de Voltar ao Topo */
+#scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    z-index: 990;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+#scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+#scroll-to-top:hover {
+    background-color: var(--primary-hover-color);
+    transform: scale(1.1);
+}
+
+/* Estilos do Chatbot */
+#chat-toggle {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    z-index: 999;
+    transition: transform 0.3s ease, opacity 0.3s ease, bottom 0.3s ease;
+}
+#chat-toggle.show-scroll-btn {
+    bottom: 6rem; /* Sobe para dar espaço ao botão de scroll */
+}
+
+#chat-toggle:hover {
+    transform: scale(1.1);
+    background-color: var(--primary-hover-color);
+}
+#chat-widget {
+    position: fixed;
+    bottom: 7rem;
+    right: 2rem;
+    width: 90%;
+    max-width: 380px;
+    height: 500px;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 998;
+    transform: translateY(20px) scale(0.95);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+#chat-widget.show-scroll-btn {
+    bottom: 11rem;
+}
+#chat-widget.open {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+.chat-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+.chat-header h3 {
+    font-weight: 600;
+}
+.chat-header button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+#chat-messages {
+    flex-grow: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.message {
+    padding: 0.75rem 1rem;
+    border-radius: 1rem;
+    max-width: 80%;
+    line-height: 1.5;
+}
+.user-message {
+    background-color: #e0f2fe; /* sky-100 */
+    color: #0c4a6e; /* sky-900 */
+    border-bottom-right-radius: 0.25rem;
+    align-self: flex-end;
+}
+.bot-message {
+    background-color: #f1f5f9; /* slate-100 */
+    color: #334155; /* slate-700 */
+    border-bottom-left-radius: 0.25rem;
+    align-self: flex-start;
+}
+.bot-message b {
+    color: #1f2937;
+}
+.bot-message ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+.bot-message ul li {
+    margin-bottom: 0.25rem;
+}
+#chat-form {
+    display: flex;
+    padding: 1rem;
+    border-top: 1px solid #e5e7eb;
+    flex-shrink: 0;
+}
+#chat-input {
+    flex-grow: 1;
+    border: 1px solid #d1d5db;
+    border-radius: 9999px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+#chat-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
+}
+#chat-form button {
+    background: none;
+    border: none;
+    margin-left: 0.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+#chat-form button:hover {
+    color: var(--primary-hover-color);
+}
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.typing-indicator span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #cbd5e1;
+    animation: bounce 1s infinite;
+}
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-6px);
+    }
+}
+
